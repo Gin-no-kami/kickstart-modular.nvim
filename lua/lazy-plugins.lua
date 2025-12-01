@@ -31,6 +31,11 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   -- { import = 'custom.plugins' },
+  require 'custom.plugins.debugger',
+  require 'custom.plugins.dressing',
+  require 'custom.plugins.git',
+  require 'custom.plugins.lualine',
+  require 'custom.plugins.overseer',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
