@@ -2,11 +2,18 @@
 -- See `:help vim.o`
 --  For more options, you can see `:help option-list`
 
+-- tabstop
+vim.o.autoindent = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -31,6 +38,11 @@ vim.o.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Set highlight on search
+vim.o.hlsearch = false
+-- Highlight matches as you search
+vim.o.incsearch = true
 
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
