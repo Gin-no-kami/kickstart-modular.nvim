@@ -34,13 +34,14 @@ return {
         -- Conform can also run multiple formatters sequentially
         rust = { 'rustfmt' },
         -- You can use a function here to determine the formatters dynamically
-        python = function(bufnr)
-          if require('conform').get_formatter_info('ruff_format', bufnr).available then
-            return { 'ruff_format' }
-          else
-            return { 'isort', 'black' }
-          end
-        end,
+        python = {
+          -- To fix auto-fixable lint errors.
+          'ruff_fix',
+          -- To run the Ruff formatter.
+          'ruff_format',
+          -- To organize the imports.
+          'ruff_organize_imports',
+        },
         cpp = { 'clang-format' },
         cuda = { 'clang-format' },
         c = { 'clang-format' },
